@@ -1,0 +1,17 @@
+[GRIPEN INFO]: Initializing...
+[GRIPEN INFO]: Path to module: E:\x-plane1140_2020_org/X-Plane 11/Aircraft/museum/Gripen_39A -F11/plugins/SASLFree/data/modules/main.lua
+[GRIPEN INFO]: Loading module...
+[GRIPEN INFO]: [LUA]: loading	module
+[GRIPEN INFO]: [LUA]: loading	FI
+[GRIPEN INFO]: [LUA]: loading	hud
+[GRIPEN INFO]: [LUA]: loading	TI
+[GRIPEN INFO]: [LUA]: loading	popupCloseButton
+[GRIPEN INFO]: [LUA]: loading	rectangle
+[GRIPEN INFO]: [LUA]: loading	mouseFocusedZone
+[GRIPEN INFO]: [LUA]: loading	interactive
+[GRIPEN INFO]: [LUA]: loading	popupResizeButton
+[GRIPEN INFO]: [LUA]: loading	MI
+[GRIPEN INFO]: Module loaded
+[GRIPEN INFO]: [LUA]: "hud"	screen rez changed: 768 x 1024 horizon offset is 0
+[GRIPEN INFO]: Disabling...
+[GRIPEN INFO]: SASL plugin stopped...

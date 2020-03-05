@@ -1,0 +1,77 @@
+A
+1000
+ACF_SOUNDS
+
+##################################
+# THE INSIDE SOUND SPACE
+##################################
+
+BEGIN_SOUND_SPACE
+	SOUND_INDEX 0
+	BLEND_DEPTH 0.03
+	AABB -0.55 -0.65 -0.90 0.55 0.67 1.70
+END_SOUND_SPACE
+
+##################################
+# MIXER SNAPSHOTS
+##################################
+
+BEGIN_SOUND_ATTACHMENT
+	SNAPSHOT_NAME /in_cockpit_door_open
+	EVENT_START_COND sim/flightmodel2/misc/canopy_open_ratio > 0.0
+	EVENT_END_COND sim/flightmodel2/misc/canopy_open_ratio == 0.0
+END_SOUND_ATTACHMENT
+
+#################
+# ENGINE SOUNDS OUT
+#################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /engine_ext_static
+	VEH_PART engine 0
+	PARAM_DREF_IDX 0
+	EVENT_ALLOWED_FOR_AI
+	EVENT_START_COND sim/cockpit2/engine/indicators/N1_percent[0] > 0.5
+	EVENT_START_COND sim/graphics/view/view_is_external == 1
+	EVENT_START_COND sim/time/paused == 0
+	EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT	
+	EVENT_NAME /engine_ext_flyby
+	VEH_PART engine 0
+	PARAM_DREF_IDX 0
+	EVENT_ALLOWED_FOR_AI
+	EVENT_START_COND sim/cockpit2/engine/indicators/N1_percent[0] > 0.5
+	EVENT_START_COND sim/graphics/view/view_is_external == 1
+	EVENT_START_COND gripen/view_is_static > 0
+	EVENT_START_COND sim/time/paused == 0
+	EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT	
+	EVENT_NAME /interior
+	VEH_PART cockpit 0
+	PARAM_DREF_IDX 0
+	EVENT_START_COND sim/cockpit2/engine/indicators/N1_percent[0] > 0.5
+	EVENT_START_COND sim/graphics/view/view_is_external == 0
+	EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT	
+	EVENT_NAME /gear
+	VEH_PART tire 0
+	PARAM_DREF_IDX 0
+	EVENT_START_COND DELTA=sim/aircraft/parts/acf_gear_deploy[1] > 0.01
+	EVENT_START_COND DELTA=sim/aircraft/parts/acf_gear_deploy[1] < -0.01
+	EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT	
+	EVENT_NAME /environment
+	EVENT_START_COND sim/graphics/view/view_is_external == 1
+	EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+
+

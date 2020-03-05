@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="MixerGroup" id="{7f7c05a4-e05a-4d44-94fe-d4691147a9b7}">
+        <property name="name">
+            <value>Master</value>
+        </property>
+        <relationship name="effectChain">
+            <destination>{8e90a16a-5456-4e92-ba90-f39f16738b57}</destination>
+        </relationship>
+        <relationship name="panner">
+            <destination>{738651ae-067a-4d50-84ba-0de9a89d848c}</destination>
+        </relationship>
+        <relationship name="output">
+            <destination>{9f08114d-36ec-44cc-b8bf-b2babda09f9e}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{8e90a16a-5456-4e92-ba90-f39f16738b57}">
+        <relationship name="effects">
+            <destination>{817ceec9-3879-4b11-a29a-c394a3171f4c}</destination>
+            <destination>{12dba966-6a40-446c-b578-c5ab3289a808}</destination>
+            <destination>{71bae605-7738-4080-b697-fbf3dbbd16c8}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusPanner" id="{738651ae-067a-4d50-84ba-0de9a89d848c}"/>
+    <object class="MixerBusFader" id="{817ceec9-3879-4b11-a29a-c394a3171f4c}"/>
+    <object class="LimiterEffect" id="{12dba966-6a40-446c-b578-c5ab3289a808}">
+        <property name="bypass">
+            <value>true</value>
+        </property>
+        <property name="release">
+            <value>42</value>
+        </property>
+        <property name="linkChannels">
+            <value>false</value>
+        </property>
+    </object>
+    <object class="CompressorEffect" id="{71bae605-7738-4080-b697-fbf3dbbd16c8}">
+        <property name="bypass">
+            <value>true</value>
+        </property>
+        <property name="threshold">
+            <value>-1.5</value>
+        </property>
+        <property name="ratio">
+            <value>2.39999986</value>
+        </property>
+        <property name="attackTime">
+            <value>0.100000001</value>
+        </property>
+        <property name="releaseTime">
+            <value>52</value>
+        </property>
+    </object>
+</objects>

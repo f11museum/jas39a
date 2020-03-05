@@ -1,0 +1,10 @@
+I
+800
+OBJ
+
+PARTICLE_SYSTEM	particles/gripen_particles.pss
+POINT_COUNTS	0	0	0	0
+
+EMITTER flare 0 0 0 0 90.00000933 0
+
+# Build with Blender 2.79 (sub 0) (build b'5bd8ac9'). Exported with XPlane2Blender 3.5.0-rc.1+40.20181016150257
